@@ -23,7 +23,10 @@ class BorderExample extends JFrame
         add(button1);
         button1.addMouseListener(new MouseListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void mouseClicked(MouseEvent e) { }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
                 milanScore += 1;
                 Score.setText(milanScore +" : "+ madridScore);
                 LastScored.setText("Last Scored: AC Milan");
@@ -32,11 +35,7 @@ class BorderExample extends JFrame
                 } else if(milanScore == madridScore){
                     Winner.setText("Winner: DRAW");
                 }
-
             }
-
-            @Override
-            public void mousePressed(MouseEvent e) {}
 
             @Override
             public void mouseReleased(MouseEvent e) {}
@@ -52,7 +51,10 @@ class BorderExample extends JFrame
         button2.setBounds(570,20,200,180);
         button2.addMouseListener(new MouseListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void mouseClicked(MouseEvent e) {}
+
+            @Override
+            public void mousePressed(MouseEvent e) {
                 madridScore += 1;
                 Score.setText(milanScore +" : "+ madridScore);
                 LastScored.setText("Last Scored: Madrid");
@@ -62,9 +64,6 @@ class BorderExample extends JFrame
                     Winner.setText("Winner: DRAW");
                 }
             }
-
-            @Override
-            public void mousePressed(MouseEvent e) {}
 
             @Override
             public void mouseReleased(MouseEvent e) {}
@@ -89,8 +88,9 @@ class BorderExample extends JFrame
         Winner.setBounds(320,120,200,100);
         add(Winner);
 
-
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800,350);
+        setResizable(false);
     }
     public static void main(String[]args)
     {
