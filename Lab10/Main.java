@@ -3,7 +3,7 @@ public class Main {
         return arr[index];
     }  
     public static void main(String[] args) {
-        Integer[] i = {1, 2, 3};
+        String[] words = {"apple", "google", "Huawei", "Xiaomi"};
         System.out.println(get(i, 2));
     }
 }
