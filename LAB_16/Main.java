@@ -3,9 +3,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<String> lst = new CycleList<>();
-        lst.add("Jopa");
-        lst.add("Her");
-        lst.add("Mocha");
+        lst.add("block21");
+        lst.add("block2");
+        lst.add("block1");
 
         System.out.println(lst.get(1));
         System.out.println(lst.size());
